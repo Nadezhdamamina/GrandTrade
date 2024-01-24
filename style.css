@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+  /* --dark-theme-backround: #F5F5F5; */
+  --light-theme-backround: #F5F5F5;
+  --theme-text: #fff;
+  --dark-green: rgb(34, 41, 22);
+  --green: rgb(74, 93, 63);
+  --light-green: rgb(179, 191, 177);
+  --bedge: rgb(243, 210, 157);
+}
+
+body {
+    /* background-color: var(--light-theme-backround); */
+    color: var(--theme-text);
+    font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+.reset-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1686px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.header {
+    position: relative;
+    padding: 5px 0;
+    /* height: 100px; */
+    z-index: 1;
+}
+
+.header__container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 95px;
+}
+
+
+
+.header__logo {
+    color: var(--dark-green);
+    align-items: center;
+}
+
+.burger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.burger:hover .burger__line {
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.burger__line {
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    background-color:var( --dark-green);
+    transition: width 0.3s ease-in-out;
+}
+
+.burger__line:nth-child(1) {
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.burger__line:nth-child(2) {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+}
+
+.burger__line:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 40%;}
+
+/* .test{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    object-fit: cover;
+    background: url("img/wheat.jpg") center / cover no-repeat;
+} */
+
+
+/* first */
+.first {
+    position: relative;
+    height: 600px;
+    padding-top: 170px;
+    background: url("img/wheat-green.jpg") center / cover no-repeat;
+    
+}
+
+.first::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+.first__container {
+    position: relative;
+    min-width: 1410px;
+    z-index: 5;
+}
+
+.first__heading,
+.about__heading,
+.principles__heading {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.first__descr {
+    margin-top: 50px;
+    font-family: "Lato";
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.68px;
+    line-height: 1.5;
+    
+}
+
+/* abour */
+.about,
+.principles {
+    padding: 70px 0;
+}
+
+.about__container {
+    
+    color: var(--dark-green);
+
+}
+
+.about__block  {
+    font-size: 20px;
+    letter-spacing: 0.68px;
+    line-height: 1.5;
+}
+
+.about__block-left {
+    padding: 30px;
+    flex: 1 0 45%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: var(--light-green);
+    border-radius: 20px;
+}
+
+.about__text {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.about__block-recht {
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.about__list {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.list-about__item {
+    padding: 20px;
+    width: 50%;
+}
+
+/* principles */
+.principles {
+    background-color: var(--dark-green);
+}
+
+.principles__list {
+    padding: 20px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.list-principles__item {
+    padding: 25px;
+    width: 20%;
+}
+
+.list-principles__heading {
+    margin-bottom: 20px;
+}
